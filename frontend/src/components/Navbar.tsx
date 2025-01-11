@@ -66,7 +66,6 @@ const Navbar = () => {
                                 value={searchValue}
                                 onChange={(e) => setSearchValue(e.target.value)}
                             />
-                            <button type="submit" style={{ display: 'none' }}>Submit</button>
                         </form>
                     ),
                     styles: 'hover:none text-black'
