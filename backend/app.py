@@ -4,10 +4,11 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+# TODO: We need to restrict access to the API.
+CORS(app)
 
 
-@app.route('/api')
+@app.route('/api', methods=['GET'])
 def api():
     return jsonify({
         'question': 'answer'

@@ -23,11 +23,11 @@ const Items = ({ items }: ItemsProps) => {
     return (
         <>
             <div className='flex justify-center gap-6 font-bold hover:cursor-pointer'>
-                <p onClick={redirectToHome}>Next Learn</p>
+                <p className="text-4xl" onClick={redirectToHome}>Next Learn</p>
             </div>
             <ul className="flex gap-6">
                 {items.map((item, index) => (
-                    <li key={index} className={item.styles || 'p-2 hover:cursor-pointer hover:bg-white hover:text-black'} onClick={item.action}>
+                    <li key={index} className={item.styles || 'p-2 hover:cursor-pointer rounded-sm hover:bg-white hover:text-blue-500'} onClick={item.action}>
                         {item.tag ? item.tag : item.content}
                     </li>
                 ))}
@@ -66,6 +66,7 @@ const Navbar = () => {
                                 value={searchValue}
                                 onChange={(e) => setSearchValue(e.target.value)}
                             />
+                            <button type="submit" style={{ display: 'none' }}>Submit</button>
                         </form>
                     ),
                     styles: 'hover:none text-black'
