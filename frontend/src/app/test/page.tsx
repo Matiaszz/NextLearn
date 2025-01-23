@@ -15,7 +15,8 @@ const Test = () => {
             .then((data) => setData(data));
     }, [])
 
-
+    console.log('abu')
+    
     return (
         <div>
             {data && data.question}
