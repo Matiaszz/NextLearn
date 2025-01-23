@@ -44,3 +44,6 @@ frontend/*.tsbuildinfo
 frontend/next-env.d.ts
 frontend/eslint.config.mjs
 frontend/config/*
+
+# db
+instance
